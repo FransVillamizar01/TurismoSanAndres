@@ -1,0 +1,54 @@
+/* contact.css */
+
+.container {
+    max-width: 1000px; /* Mantener el tamaño máximo del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 40px; /* Aumentar el relleno */
+    display: flex; /* Utilizar flexbox para alineación vertical */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar elementos horizontalmente */
+}
+
+h2 {
+    margin-bottom: 30px; /* Mayor margen inferior */
+    font-size: 36px; /* Tamaño de fuente más grande */
+    color: black; /* Color de texto negro */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 16px; /* Aumentar el relleno */
+    margin-bottom: 40px; /* Espacio extra */
+    font-size: 24px; /* Tamaño de fuente más grande */
+    opacity: 0.5; /* Hacer el input un poco transparente */
+}
+
+.table {
+    width: 100%; /* Utilizar todo el ancho del contenedor */
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 16px; /* Aumentar el relleno */
+    border-bottom: 3px solid #5e5e5e; /* Borde más grueso */
+    text-align: left;
+    font-size: 24px; /* Tamaño de fuente más grande */
+    color: black; /* Color de texto negro */
+}
+
+.table th {
+    background-color: #00788d6b;
+}
+
+.table td button {
+    padding: 14px 28px; /* Tamaño de botón más grande */
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px; /* Tamaño de fuente más grande */
+}
+
+.table td button:hover {
+    background-color: #0056b3;
+}

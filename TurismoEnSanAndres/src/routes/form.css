@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+body {
+    margin: 0;
+    font-family: "Protest Strike", sans-serif;
+    background-image: url('https://media.staticontent.com/media/pictures/5cc13b62-c0dc-4143-b3e0-a895752c280e');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(179, 179, 179, 0.904); /* Cambia la opacidad según sea necesario */
+}
+
+
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: black; /* Cambiar el color del texto a negro */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.link {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.button.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.button.loading::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top-color: #007bff;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos del botón de "neón" */
+.button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* Añadido para asegurarse de que el botón esté en la capa superior */
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #666666, #999999, #cccccc, #999999, #666666); /* Paleta de colores grises */
+    transition: transform 1.5s;
+    z-index: -1; /* Asegúrate de que el pseudo-elemento esté detrás del botón */
+}
+
+.button:hover::before {
+    transform: rotate(360deg);
+}
