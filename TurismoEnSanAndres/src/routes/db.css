@@ -1,39 +1,39 @@
-/* contact.css */
+/* db.css */
 
 .container {
-    max-width: 1000px; /* Mantener el tamaño máximo del contenedor */
-    margin: 0 auto; /* Centrar horizontalmente */
-    padding: 40px; /* Aumentar el relleno */
-    display: flex; /* Utilizar flexbox para alineación vertical */
-    flex-direction: column; /* Apilar elementos verticalmente */
-    align-items: center; /* Centrar elementos horizontalmente */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
-    margin-bottom: 30px; /* Mayor margen inferior */
-    font-size: 36px; /* Tamaño de fuente más grande */
-    color: black; /* Color de texto negro */
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: black;
 }
 
 input[type="text"] {
     width: 100%;
-    padding: 16px; /* Aumentar el relleno */
-    margin-bottom: 40px; /* Espacio extra */
-    font-size: 24px; /* Tamaño de fuente más grande */
-    opacity: 0.5; /* Hacer el input un poco transparente */
+    padding: 16px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    opacity: 0.5;
 }
 
 .table {
-    width: 100%; /* Utilizar todo el ancho del contenedor */
+    width: 100%;
     border-collapse: collapse;
 }
 
 .table th, .table td {
-    padding: 16px; /* Aumentar el relleno */
-    border-bottom: 3px solid #5e5e5e; /* Borde más grueso */
+    padding: 16px;
+    border-bottom: 3px solid #5e5e5e;
     text-align: left;
-    font-size: 24px; /* Tamaño de fuente más grande */
-    color: black; /* Color de texto negro */
+    font-size: 24px;
+    color: black;
 }
 
 .table th {
@@ -41,12 +41,12 @@ input[type="text"] {
 }
 
 .table td button {
-    padding: 14px 28px; /* Tamaño de botón más grande */
+    padding: 14px 28px;
     border: none;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    font-size: 24px; /* Tamaño de fuente más grande */
+    font-size: 24px;
 }
 
 .table td button:hover {
