@@ -26,6 +26,7 @@ input[type="text"] {
 .table {
     width: 100%;
     border-collapse: collapse;
+    background-color: white; /* Fondo blanco para la tabla */
 }
 
 .table th, .table td {
@@ -40,7 +41,8 @@ input[type="text"] {
     background-color: #00788d6b;
 }
 
-.ver-mas {
+.ver-mas,
+.ver-calificaciones { /* Estilo para el botón "Ver calificaciones" */
     padding: 6px 12px;
     background-color: #007bff;
     color: white;
@@ -50,9 +52,11 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.ver-mas:hover {
+.ver-mas:hover,
+.ver-calificaciones:hover { /* Estilo para el hover del botón "Ver calificaciones" */
     background-color: #0056b3;
 }
+
 .pagination {
     margin-top: 20px; /* Ajusta el margen superior según sea necesario */
 }
