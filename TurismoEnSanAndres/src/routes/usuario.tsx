@@ -117,9 +117,13 @@ export default function Usuario() {
   // Filtrar lugares con estadoID diferente de "2"
   const filteredVisitedPlaces = visitedPlaces.filter(place => place.estadoID !== '2');
 
-  const handleLogout = () => {
-    localStorage.removeItem('userId'); // Eliminar el ID del usuario de localStorage
-    navigate('/'); // Redirigir a la página de inicio
+  const handleLogout = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    if (!window.confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+      e.preventDefault(); // Evita la acción predeterminada si el usuario cancela
+    } else {
+      localStorage.removeItem('userId'); // Eliminar el ID del usuario de localStorage
+      navigate('/'); // Redirigir a la página de inicio
+    }
   };
 
   return (
@@ -211,12 +215,3 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-
-
-
-
-
-
-
-

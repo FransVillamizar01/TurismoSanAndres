@@ -61,8 +61,28 @@ export default function Contact() {
             }
         };
         fetchData();
+        const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+            // Cancela el evento de cierre si el usuario decide quedarse en la página
+            e.preventDefault();
+            // Muestra la alerta de confirmación
+            e.returnValue = '';
+            return '';
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        // Remueve el event listener cuando el componente se desmonta
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
     }, []);
 
+    const handleCloseSession = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        if (!window.confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+            e.preventDefault(); // Evita la acción predeterminada si el usuario cancela
+        }
+    };
+    
     const getCurrentPageData = (): TurismoData[] => {
         const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
         const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, filteredData.length);
@@ -187,10 +207,9 @@ return (
                 </div>
             </div>
         )}
-
-        <Link to="/">
-            <button style={{ alignSelf: 'flex-start', marginTop: '20px' }}>Cerrar sesión</button>
-        </Link>
+            <Link to="/" onClick={handleCloseSession}>
+                <button style={{ alignSelf: 'flex-start', marginTop: '20px' }}>Cerrar sesión</button>
+            </Link>
     </div>
 );
 }

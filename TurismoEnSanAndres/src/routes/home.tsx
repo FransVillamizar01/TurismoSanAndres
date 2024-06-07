@@ -50,8 +50,10 @@ export default function Home() {
                     // Redirigir a la página de usuarios o contactos dependiendo del rol
                     if (user.rol === 2) {
                         navigate('/usuario');
+                        alert('¡Bienvenido ' + user.nombre + '!');
                     } else if (user.rol === 1) {
                         navigate('/contact');
+                        alert('¡Bienvenido Administrador!\nLos registros pueden tardar un poco en verse reflejados');
                     } else {
                         setError('Rol desconocido. Por favor, inténtalo de nuevo.');
                     }

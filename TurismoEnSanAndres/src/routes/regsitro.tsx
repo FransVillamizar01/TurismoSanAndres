@@ -11,21 +11,28 @@ export default function Registro() {
 
     const handleRegister = async () => {
         try {
-            const response = await axios.post('https://mongo-sesion-latest.onrender.com/crearUsuario', 
-            {
-                nombre: username,
-                contraseña: password
-            }, {
-                headers: {
-                    "ngrok-skip-browser-warning": "69420"
+            // Mostrar alerta de confirmación antes de registrar al usuario
+            const confirmRegister = window.confirm('¿Estás seguro de que deseas registrarte?');
+            if (confirmRegister) {
+                if (username !== "" && password !== "") {
+                    const response = await axios.post('https://mongo-sesion-latest.onrender.com/crearUsuario',
+                        {
+                            nombre: username,
+                            contraseña: password
+                        }, {
+                        headers: {
+                            "ngrok-skip-browser-warning": "69420"
+                        }
+                    });
+                    alert('Registro Exitoso\n¡Bienvenido ' + username + '!');
+                    console.log('Registro exitoso:', response.data);
+                    setError(''); // Limpiar el mensaje de error
+                    // Redirigir a la página de inicio después de registrar
+                    navigate('/'); // Redirigimos a la página de inicio
+                } else {
+                    setError('Verifique que los campos no se encuentren vacíos');
                 }
-            });
-
-            console.log('Registro exitoso:', response.data);
-            setError(''); // Limpiar el mensaje de error
-
-            // Redirigir a la página de inicio después de registrar
-            navigate('/'); // Redirigimos a la página de inicio
+            }
         } catch (error) {
             console.error('Error en el registro:', error);
             setError('Ocurrió un error al registrarse. Por favor, inténtalo de nuevo.');
@@ -46,7 +53,12 @@ export default function Registro() {
                     <input type="password" id="password" name="password" className="input" placeholder="Tu contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <button type="button" className="button" onClick={handleRegister}>
-                    Registrar
+                    Registrarse
+                </button>
+                <br></br>
+                <br></br>
+                <button type="button" className="button" onClick={() => history.back()}>
+                    Volver
                 </button>
             </form>
         </div>
