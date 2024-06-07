@@ -6,6 +6,13 @@ import {createHashRouter, RouterProvider} from 'react-router-dom'
 import Home from './routes/home'
 import About from './routes/about'
 import Contact from './routes/contact'
+import Usuario from './routes/usuario'
+import Registro from './routes/regsitro'
+import Reseñas from './routes/reseñas'
+
+
+
+
 
 const router = createHashRouter([
   {
@@ -20,6 +27,24 @@ const router = createHashRouter([
     path:'/contact',
     element:<Contact />
   },
+
+  {
+    path:'/usuario',
+    element:<Usuario/>
+  },
+  
+  {
+    path:'/registro',
+    element:<Registro/>
+  },
+
+  {
+    path:'/reseñas',
+    element:<Reseñas/>
+  },
+
+
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

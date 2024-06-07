@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
 body {
     margin: 0;
     font-family: "Protest Strike", sans-serif;
@@ -47,24 +48,23 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    background-color: rgba(179, 179, 179, 0.904); /* Cambia la opacidad según sea necesario */
+    background-color: rgba(179, 179, 179, 0.904);
 }
 
-
-
-.button {
+.styled-button {
     width: 100%;
     padding: 12px;
     background-color: #007bff;
-    color: black; /* Cambiar el color del texto a negro */
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 10px 0; /* Agregado para dar espacio entre los botones */
 }
 
-.button:hover {
+.styled-button:hover {
     background-color: #0056b3;
 }
 
@@ -81,12 +81,12 @@ body {
     color: #0056b3;
 }
 
-.button.loading {
+.styled-button.loading {
     pointer-events: none;
     opacity: 0.7;
 }
 
-.button.loading::after {
+.styled-button.loading::after {
     content: '';
     width: 16px;
     height: 16px;
@@ -105,25 +105,24 @@ body {
     }
 }
 
-/* Estilos del botón de "neón" */
-.button {
+.styled-button {
     position: relative;
     overflow: hidden;
-    z-index: 1; /* Añadido para asegurarse de que el botón esté en la capa superior */
+    z-index: 1;
 }
 
-.button::before {
+.styled-button::before {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, #666666, #999999, #cccccc, #999999, #666666); /* Paleta de colores grises */
+    background: linear-gradient(45deg, #666666, #999999, #cccccc, #999999, #666666);
     transition: transform 1.5s;
-    z-index: -1; /* Asegúrate de que el pseudo-elemento esté detrás del botón */
+    z-index: -1;
 }
 
-.button:hover::before {
+.styled-button:hover::before {
     transform: rotate(360deg);
 }

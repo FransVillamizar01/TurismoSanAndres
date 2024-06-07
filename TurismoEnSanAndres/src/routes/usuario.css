@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media.staticontent.com/media/pictures/5cc13b62-c0dc-4143-b3e0-a895752c280e');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    color: black;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td {
+    background-color: #fff;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Añade este código CSS */
+input[type="text"] {
+    width: 100%; /* Asegura que el cuadro de texto no sobresalga de la tabla */
+}
+
